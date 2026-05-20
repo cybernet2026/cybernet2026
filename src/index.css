@@ -165,7 +165,6 @@ input {
 }
 
 .cyberGrid,
-.cyberNoise,
 .beam,
 .pulseNode {
   position: absolute;
@@ -178,10 +177,6 @@ input {
   background:
     linear-gradient(115deg, transparent 0 42%, rgba(16, 185, 129, 0.18) 42.2%, transparent 42.5%),
     linear-gradient(65deg, transparent 0 58%, rgba(6, 182, 212, 0.16) 58.2%, transparent 58.5%);
-}
-
-.cyberNoise {
-  display: none;
 }
 
 .pulseNode {
@@ -368,175 +363,313 @@ input {
 }
 
 /* =========================
-   SOC PANEL
+   VERSION 2 HERO CYBER CARD
 ========================= */
 
-.socPanel {
+.cyberOpsCard {
   position: relative;
-  border-radius: 30px;
+  border-radius: 32px;
   padding: 28px;
-  background: rgba(8, 20, 36, 0.8);
-  border: 1px solid rgba(16, 185, 129, 0.22);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(20px);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(20, 184, 166, 0.16), transparent 34%),
+    radial-gradient(circle at 90% 88%, rgba(37, 99, 235, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(8, 20, 36, 0.94), rgba(5, 14, 28, 0.96));
+  border: 1px solid rgba(45, 212, 191, 0.18);
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   overflow: hidden;
+  backdrop-filter: blur(22px);
 }
 
-.socPanel::before {
+.cyberOpsCard::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 28px 28px;
-  opacity: 0.65;
-  mask-image: linear-gradient(to bottom, black, transparent);
+  opacity: 0.46;
+  pointer-events: none;
 }
 
-.socPanel > * {
+.cyberOpsCard::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(45, 212, 191, 0.08);
+  pointer-events: none;
+}
+
+.cyberOpsCard > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-.panelTop {
+.cyberOpsTop {
   display: flex;
   gap: 8px;
+  margin-bottom: 22px;
 }
 
-.panelTop span {
-  width: 12px;
-  height: 12px;
+.windowDot {
+  width: 11px;
+  height: 11px;
   border-radius: 999px;
-  background: #94a3b8;
 }
 
-.panelTop span:nth-child(1) {
+.windowDot.red {
   background: #ef4444;
 }
 
-.panelTop span:nth-child(2) {
+.windowDot.yellow {
   background: #f59e0b;
 }
 
-.panelTop span:nth-child(3) {
+.windowDot.green {
   background: #22c55e;
 }
 
-.terminalLabel {
-  margin-top: 28px;
-  color: var(--green);
+.cyberOpsHeader p {
+  margin: 0 0 10px;
+  color: #34d399;
   font-size: 13px;
-  letter-spacing: 0.16em;
   font-weight: 950;
+  letter-spacing: 0.18em;
 }
 
-.socPanel h2 {
-  margin: 8px 0 18px;
-  font-size: 34px;
+.cyberOpsHeader h2 {
+  margin: 0;
+  color: white;
+  font-size: 36px;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
 }
 
-.threatDial {
-  margin: 12px 0 18px;
-  height: 104px;
+.radarModule {
   display: grid;
   place-items: center;
+  padding: 26px 0 22px;
+}
+
+.radarCircle {
   position: relative;
-}
-
-.dialRing {
-  position: absolute;
-  width: 104px;
-  height: 104px;
-  border-radius: 999px;
-  border: 1px solid rgba(16, 185, 129, 0.18);
-  background: conic-gradient(
-    from 0deg,
-    rgba(16, 185, 129, 0.9),
-    rgba(6, 182, 212, 0.8),
-    rgba(37, 99, 235, 0.6),
-    rgba(16, 185, 129, 0.9)
-  );
-  mask: radial-gradient(circle, transparent 47%, black 49%);
-}
-
-.dialCore {
-  width: 66px;
-  height: 66px;
+  width: 148px;
+  height: 148px;
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background:
+    radial-gradient(circle, rgba(20, 184, 166, 0.12), rgba(15, 23, 42, 0.14) 58%, transparent 60%),
+    repeating-radial-gradient(
+      circle,
+      rgba(45, 212, 191, 0.18) 0 1px,
+      transparent 1px 24px
+    );
+  border: 1px solid rgba(45, 212, 191, 0.22);
+  box-shadow:
+    0 0 42px rgba(20, 184, 166, 0.12),
+    inset 0 0 40px rgba(6, 182, 212, 0.08);
+  overflow: hidden;
 }
 
-.dialCore svg {
-  color: var(--green);
+.radarCircle::before,
+.radarCircle::after {
+  content: "";
+  position: absolute;
+  background: rgba(45, 212, 191, 0.16);
 }
 
-.deadlineBox {
-  padding: 20px;
-  border-radius: 22px;
+.radarCircle::before {
+  width: 1px;
+  height: 100%;
+}
+
+.radarCircle::after {
+  width: 100%;
+  height: 1px;
+}
+
+.radarSweep {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 0;
+  transform-origin: bottom left;
   background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.13),
-    rgba(6, 182, 212, 0.1),
-    rgba(37, 99, 235, 0.12)
+    45deg,
+    rgba(45, 212, 191, 0.55),
+    rgba(45, 212, 191, 0.08),
+    transparent 65%
   );
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  animation: radarSpin 4.5s linear infinite;
 }
 
-.deadlineBox small,
-.terminalRows b {
-  color: #a9bed2;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
+@keyframes radarSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.radarNode {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #34d399;
+  box-shadow: 0 0 18px rgba(52, 211, 153, 0.85);
+}
+
+.radarNode.nodeOne {
+  top: 38px;
+  right: 42px;
+}
+
+.radarNode.nodeTwo {
+  bottom: 44px;
+  left: 36px;
+  background: #22d3ee;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.85);
+}
+
+.radarNode.nodeThree {
+  right: 34px;
+  bottom: 36px;
+  background: #60a5fa;
+  box-shadow: 0 0 18px rgba(96, 165, 250, 0.85);
+}
+
+.shieldCore {
+  position: relative;
+  z-index: 3;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0f766e, #0891b2, #2563eb);
+  color: white;
+  box-shadow:
+    0 0 0 9px rgba(20, 184, 166, 0.08),
+    0 0 36px rgba(6, 182, 212, 0.24);
+}
+
+.shieldCore svg {
+  width: 31px;
+  height: 31px;
+}
+
+.deadlineSecureBox {
+  padding: 18px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(20, 184, 166, 0.14), rgba(37, 99, 235, 0.12));
+  border: 1px solid rgba(45, 212, 191, 0.18);
+}
+
+.deadlineSecureBox small {
+  display: block;
+  color: #cbd5e1;
   font-size: 12px;
   font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.deadlineBox strong {
+.deadlineSecureBox strong {
   display: block;
-  margin-top: 7px;
-  font-size: 29px;
+  margin-top: 8px;
+  color: white;
+  font-size: 26px;
+  line-height: 1.15;
+  font-weight: 950;
 }
 
-.deadlineBox span {
+.deadlineSecureBox span {
   display: block;
   margin-top: 6px;
-  color: #b7c7d8;
+  color: #c7d8ea;
+  font-size: 15px;
+  font-weight: 650;
 }
 
-.terminalRows {
-  margin-top: 18px;
+.secureTimeline {
   display: grid;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
-.terminalRows div {
+.secureTimeline > div {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 13px;
+  align-items: center;
   padding: 14px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.052);
+  border: 1px solid rgba(255, 255, 255, 0.065);
 }
 
-.terminalRows span,
-.terminalRows strong {
+.secureTimeline > div > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(20, 184, 166, 0.12);
+  color: #7dd3fc;
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.secureTimeline small {
   display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.terminalRows span {
-  margin-top: 6px;
-  color: #e5eef8;
-  font-weight: 850;
+.secureTimeline strong {
+  display: block;
+  margin-top: 5px;
+  color: white;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 900;
 }
 
-.terminalRows strong {
-  margin-top: 4px;
-  color: var(--green);
+.secureTimeline p {
+  margin: 4px 0 0;
+  color: #34d399;
   font-size: 14px;
+  font-weight: 800;
+}
+
+.securityTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.securityTags span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(45, 212, 191, 0.13);
+  color: #d8e6f5;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.02em;
 }
 
 /* =========================
@@ -1188,7 +1321,7 @@ input {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .socPanel {
+  .cyberOpsCard {
     max-width: 560px;
   }
 
@@ -1196,6 +1329,27 @@ input {
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .cyberOpsHeader h2 {
+    font-size: 32px;
+  }
+
+  .radarCircle {
+    width: 128px;
+    height: 128px;
+  }
+
+  .shieldCore {
+    width: 58px;
+    height: 58px;
+  }
+
+  .shieldCore svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
