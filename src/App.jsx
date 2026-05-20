@@ -127,6 +127,7 @@ function App() {
       <main>
         <section id="home" className="hero">
           <div className="cyberGrid" />
+          <div className="cyberNoise" />
           <div className="pulseNode nodeA" />
           <div className="pulseNode nodeB" />
           <div className="pulseNode nodeC" />
@@ -155,13 +156,11 @@ function App() {
 
               <div className="heroFacts">
                 <Fact icon={<MapPin />} label="Location" value="Tokyo, Japan" />
-
                 <Fact
                   icon={<CalendarDays />}
                   label="Conference Dates"
                   value="23–26 November 2026"
                 />
-
                 <Fact
                   icon={<ShieldCheck />}
                   label="Workshop Date"
@@ -173,130 +172,13 @@ function App() {
                 <a className="primaryBtn" href="#submission">
                   Submission Details
                 </a>
-
                 <a className="ghostBtn" href="#topics">
                   Explore Topics
                 </a>
               </div>
             </div>
 
-<div className="cyberOpsCard compactCyberCard">
-  <div className="cyberOpsTop">
-    <span className="windowDot red"></span>
-    <span className="windowDot yellow"></span>
-    <span className="windowDot green"></span>
-  </div>
-
-  <div className="cyberOpsHeader">
-    <p>SECURE_NETWORK_STATUS</p>
-    <h2>Call for Papers</h2>
-  </div>
-
-  <div className="compactRadarModule">
-    <div className="compactRadarCircle">
-      <div className="radarSweep"></div>
-
-      <span className="radarNode nodeOne"></span>
-      <span className="radarNode nodeTwo"></span>
-      <span className="radarNode nodeThree"></span>
-
-      <div className="compactShieldCore">
-        <svg viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 3L19 6V11.5C19 16.2 16.1 20 12 21C7.9 20 5 16.2 5 11.5V6L12 3Z"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8.8 12.1L10.9 14.2L15.4 9.7"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <div className="deadlineSecureBox compactDeadlineBox">
-    <small>Next Deadline</small>
-    <strong>August 31, 2026</strong>
-    <span>Workshop paper submission</span>
-  </div>
-
-  <div className="compactTimeline">
-    <div>
-      <span>01</span>
-      <div>
-        <small>Deadline</small>
-        <strong>Paper Submission</strong>
-        <p>August 31, 2026</p>
-      </div>
-    </div>
-
-    <div>
-      <span>02</span>
-      <div>
-        <small>Final Version</small>
-        <strong>Camera Ready</strong>
-        <p>September 30, 2026</p>
-      </div>
-    </div>
-
-    <div>
-      <span>03</span>
-      <div>
-        <small>Workshop Event</small>
-        <strong>Tokyo, Japan</strong>
-        <p>November 26, 2026</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-              <div className="deadlineSecureBox">
-                <small>Next Deadline</small>
-                <strong>August 31, 2026</strong>
-                <span>Workshop paper submission</span>
-              </div>
-
-              <div className="secureTimeline">
-                <div>
-                  <span>01</span>
-                  <div>
-                    <small>Deadline</small>
-                    <strong>Paper Submission</strong>
-                    <p>August 31, 2026</p>
-                  </div>
-                </div>
-
-                <div>
-                  <span>02</span>
-                  <div>
-                    <small>Final Version</small>
-                    <strong>Camera Ready</strong>
-                    <p>September 30, 2026</p>
-                  </div>
-                </div>
-
-                <div>
-                  <span>03</span>
-                  <div>
-                    <small>Tokyo, Japan</small>
-                    <strong>Workshop Event</strong>
-                    <p>November 26, 2026</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="securityTags">
-                <span>Trustworthy AI</span>
-                <span>Secure Edge</span>
-                <span>Mobile Defense</span>
-              </div>
-            </div>
+            <CyberHeroCard />
           </div>
         </section>
 
@@ -320,19 +202,16 @@ function App() {
               title="Mission-critical connectivity"
               text="Rapidly deployable networks support emergency response, tactical operations, situational awareness, autonomous systems, and remote-controlled devices."
             />
-
             <Feature
               icon={<Cpu />}
               title="Edge intelligence"
               text="Edge computing brings compute, caching, sensing, and control near critical IoT devices and mobile network operations."
             />
-
             <Feature
               icon={<LockKeyhole />}
               title="AI-resilient security"
               text="The workshop targets trustworthy, explainable, robust, and adversarially resilient AI for cybersecurity in mobile and edge networks."
             />
-
             <Feature
               icon={<Network />}
               title="System-aware defense"
@@ -370,19 +249,16 @@ function App() {
               title="Trust & Authentication"
               text="PKI, identity, authentication, access control, and trust management for mobile mission-critical environments."
             />
-
             <FocusCard
               icon={<DatabaseZap />}
               title="Threat Intelligence"
               text="AI-driven detection, knowledge fusion, intrusion response, digital twins, and situational cyber awareness."
             />
-
             <FocusCard
               icon={<ServerCog />}
               title="Edge & SDN Security"
               text="Programmable defenses, edge orchestration, software-defined control, and resource-aware cyber protection."
             />
-
             <FocusCard
               icon={<Satellite />}
               title="Mobile Network Resilience"
@@ -612,6 +488,74 @@ function App() {
           ))}
         </div>
       </footer>
+    </div>
+  );
+}
+
+function CyberHeroCard() {
+  return (
+    <div className="cyberHeroCard">
+      <div className="cyberHeroCard__top">
+        <span className="dot red"></span>
+        <span className="dot yellow"></span>
+        <span className="dot green"></span>
+      </div>
+
+      <p className="cyberHeroCard__label">CYBERNET_STATUS</p>
+      <h3 className="cyberHeroCard__title">Security Operations Panel</h3>
+
+      <div className="cyberHeroCard__visual">
+        <div className="shieldPulse">
+          <div className="shieldPulse__ring shieldPulse__ring--one"></div>
+          <div className="shieldPulse__ring shieldPulse__ring--two"></div>
+
+          <div className="shieldPulse__core">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M12 3l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V6l7-3z" />
+              <path d="M9.5 12.5l1.8 1.8 3.7-4.1" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div className="cyberHeroCard__highlight">
+        <small>Next Deadline</small>
+        <strong>August 31, 2026</strong>
+        <span>Workshop paper submission</span>
+      </div>
+
+      <div className="cyberHeroCard__metrics">
+        <div className="metricItem">
+          <span className="metricItem__kicker">SECURITY FOCUS</span>
+          <strong>AI Defense</strong>
+          <small>Mission-critical mobile networks</small>
+        </div>
+
+        <div className="metricItem">
+          <span className="metricItem__kicker">FINAL VERSION</span>
+          <strong>September 30, 2026</strong>
+          <small>Camera Ready</small>
+        </div>
+
+        <div className="metricItem">
+          <span className="metricItem__kicker">WORKSHOP EVENT</span>
+          <strong>November 26, 2026</strong>
+          <small>Tokyo, Japan</small>
+        </div>
+      </div>
+
+      <div className="cyberHeroCard__tags">
+        <span>Zero-Trust</span>
+        <span>Secure Edge</span>
+        <span>AI Defense</span>
+      </div>
     </div>
   );
 }
