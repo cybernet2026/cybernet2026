@@ -70,7 +70,7 @@ const coChairs = [
 ];
 
 const webTeam = [
-  ["Nathan Kahsay", "Web Coordinator", "kryptgram@gmail.com"],
+  ["Nathan Kahsay", "Web Coordinator", "Canadian University Dubai, UAE"],
 ];
 
 const editions = [
