@@ -12,11 +12,17 @@ import {
   X,
   ExternalLink,
   ChevronDown,
+  Radar,
+  ServerCog,
+  Activity,
+  Fingerprint,
+  Satellite,
+  DatabaseZap,
 } from "lucide-react";
 
 const nav = [
   ["Home", "home"],
-  ["Scope", "scope"],
+  ["Mission", "mission"],
   ["Topics", "topics"],
   ["Submission", "submission"],
   ["Committees", "committees"],
@@ -69,9 +75,7 @@ const coChairs = [
   ["Sherif Moussa", "Canadian University Dubai, UAE"],
 ];
 
-const webTeam = [
-  ["Nathan Kahsay", "Canadian University Dubai, UAE"],
-];
+const webTeam = [["Nathan Kahsay", "Web Coordinator", "Canadian University Dubai, UAE"]];
 
 const editions = [
   {
@@ -122,40 +126,44 @@ function App() {
 
       <main>
         <section id="home" className="hero">
-          <div className="heroGrid" />
-          <div className="scan scanA" />
-          <div className="scan scanB" />
+          <div className="cyberGrid" />
+          <div className="cyberNoise" />
+          <div className="pulseNode nodeA" />
+          <div className="pulseNode nodeB" />
+          <div className="pulseNode nodeC" />
+          <div className="beam beamA" />
+          <div className="beam beamB" />
 
           <div className="heroShell">
-            <div className="heroLeft">
+            <div className="heroCopy">
               <div className="statusPill">
                 <span />
-                3rd International Workshop · ACM MobiHoc 2026
+                3rd International Workshop · In conjunction with ACM MobiHoc 2026
               </div>
 
               <h1>
                 CyberNet:
                 <br />
-                Next-Gen Cybersecurity for
-                <em> Mission-Critical Mobile Networks</em>
+                Next-Gen Cybersecurity for{" "}
+                <em>Mission-Critical Mobile Networks</em>
               </h1>
 
               <p className="heroLead">
-                A focused workshop on trustworthy AI, resilient mobile systems,
-                edge security, IoT protection, and mission-critical network
-                defense.
+                A research forum for trustworthy AI, resilient edge systems,
+                tactical mobile networks, IoT security, and cyber defense for
+                mission-critical operations.
               </p>
 
               <div className="heroFacts">
                 <Fact icon={<MapPin />} label="Location" value="Tokyo, Japan" />
                 <Fact
                   icon={<CalendarDays />}
-                  label="Dates"
+                  label="Conference Dates"
                   value="23–26 November 2026"
                 />
                 <Fact
                   icon={<ShieldCheck />}
-                  label="Workshop"
+                  label="Workshop Date"
                   value="November 26, 2026"
                 />
               </div>
@@ -170,16 +178,22 @@ function App() {
               </div>
             </div>
 
-            <div className="commandCard">
-              <div className="terminalTop">
+            <div className="socPanel">
+              <div className="panelTop">
                 <span />
                 <span />
                 <span />
               </div>
 
-              <p className="terminalLabel">CYBERNET_STATUS</p>
-
+              <p className="terminalLabel">CYBERNET_OPERATION_STATUS</p>
               <h2>Call for Papers</h2>
+
+              <div className="threatDial">
+                <div className="dialRing" />
+                <div className="dialCore">
+                  <Radar />
+                </div>
+              </div>
 
               <div className="deadlineBox">
                 <small>Next Deadline</small>
@@ -207,57 +221,89 @@ function App() {
           <Metric number="Tokyo" label="Japan" />
         </section>
 
-        <section id="scope" className="section">
+        <section id="mission" className="section missionSection">
           <SectionHeader
-            eyebrow="Workshop Scope"
-            title="Security for the next generation of mobile critical infrastructure"
-            text="CyberNet 2026 addresses the cybersecurity challenges of rapidly deployable, dependable, mobile, edge-enabled, and mission-critical networks."
+            eyebrow="Mission"
+            title="Cyber defense for critical, mobile, edge-enabled infrastructure"
+            text="CyberNet 2026 focuses on mission-critical mobile networks where cybersecurity must operate under mobility, intermittent connectivity, strict latency, reliability requirements, and limited resources."
           />
 
-          <div className="scopeGrid">
+          <div className="missionGrid">
             <Feature
               icon={<Radio />}
               title="Mission-critical connectivity"
-              text="Rapidly deployable networks support situational awareness, autonomous systems, video-based communication, and remote-controlled devices."
+              text="Rapidly deployable networks support emergency response, tactical operations, situational awareness, autonomous systems, and remote-controlled devices."
             />
             <Feature
               icon={<Cpu />}
               title="Edge intelligence"
-              text="Edge computing delivers compute, caching, sensing, control, and IoT services near mission-critical operations."
+              text="Edge computing brings compute, caching, sensing, and control near critical IoT devices and mobile network operations."
             />
             <Feature
               icon={<LockKeyhole />}
-              title="Trustworthy AI security"
-              text="AI-based security must become dependable, robust, resilient, explainable, and resistant to adversarial and backdoor attacks."
+              title="AI-resilient security"
+              text="The workshop targets trustworthy, explainable, robust, and adversarially resilient AI for cybersecurity in mobile and edge networks."
             />
             <Feature
               icon={<Network />}
-              title="System-aware defenses"
-              text="The workshop prioritizes prototypes, testbeds, measurement studies, deployment experiences, and cross-layer security designs."
+              title="System-aware defense"
+              text="CyberNet prioritizes prototypes, testbeds, measurement studies, deployments, and cross-layer security architectures."
             />
           </div>
 
-          <div className="objectivePanel">
+          <div className="operationsPanel">
             <div>
-              <p className="eyebrow">Objective</p>
-              <h3>Focused platform for academia, industry, and government</h3>
+              <p className="eyebrow light">Workshop Objective</p>
+              <h3>Connecting cybersecurity research with real mission constraints</h3>
             </div>
 
             <p>
-              CyberNet 2026 brings together researchers and practitioners to
-              exchange ideas and develop innovative approaches spanning mobile
-              systems, wireless networks, edge computing, large-scale IoT
-              environments, and mission-critical cybersecurity.
+              CyberNet 2026 provides a focused platform for researchers and
+              practitioners from academia, industry, and government to exchange
+              ideas and develop innovative approaches across mobile systems,
+              wireless networks, edge computing, large-scale IoT environments,
+              and mission-critical cybersecurity.
             </p>
           </div>
         </section>
 
-        <section id="topics" className="section darkSection">
+        <section className="section darkSection">
+          <SectionHeader
+            eyebrow="Cybersecurity Focus"
+            title="A workshop for resilient network defense"
+            text="The workshop emphasizes practical, system-oriented security research for mobile networks that must remain dependable even under cyberattack, infrastructure stress, and changing operational conditions."
+            light
+          />
+
+          <div className="focusGrid">
+            <FocusCard
+              icon={<Fingerprint />}
+              title="Trust & Authentication"
+              text="PKI, identity, authentication, access control, and trust management for mobile mission-critical environments."
+            />
+            <FocusCard
+              icon={<DatabaseZap />}
+              title="Threat Intelligence"
+              text="AI-driven detection, knowledge fusion, intrusion response, digital twins, and situational cyber awareness."
+            />
+            <FocusCard
+              icon={<ServerCog />}
+              title="Edge & SDN Security"
+              text="Programmable defenses, edge orchestration, software-defined control, and resource-aware cyber protection."
+            />
+            <FocusCard
+              icon={<Satellite />}
+              title="Mobile Network Resilience"
+              text="Security designs for mobility, intermittent connectivity, latency-sensitive systems, IoT, and cross-layer operations."
+            />
+          </div>
+        </section>
+
+        <section id="topics" className="section topicsSection">
           <SectionHeader
             eyebrow="Topics of Interest"
             title="Search the technical scope"
-            text="CyberNet welcomes system-oriented contributions across AI security, mobile networking, IoT, edge orchestration, authentication, resilience, and software-defined control."
-            light
+            text="CyberNet welcomes work across AI-driven cybersecurity, mission-critical networks, mobile systems, edge intelligence, IoT, authentication, digital twins, and resilient networked infrastructure."
           />
 
           <div className="topicSearch">
@@ -282,7 +328,7 @@ function App() {
           )}
         </section>
 
-        <section id="submission" className="section">
+        <section id="submission" className="section submissionSection">
           <SectionHeader
             eyebrow="Submission"
             title="Submission Information"
@@ -351,7 +397,7 @@ function App() {
           </div>
         </section>
 
-        <section id="committees" className="section muted">
+        <section id="committees" className="section committeesSection">
           <SectionHeader
             eyebrow="Committees"
             title="Workshop Committees"
@@ -382,11 +428,11 @@ function App() {
           <h3 className="blockTitle">Web Coordination</h3>
 
           <div className="peopleGrid two">
-            {webTeam.map(([name, affiliation]) => (
+            {webTeam.map(([name, role, affiliation]) => (
               <Person
                 key={name}
                 name={name}
-                affiliation={affiliation}
+                affiliation={`${role} · ${affiliation}`}
               />
             ))}
           </div>
@@ -398,7 +444,7 @@ function App() {
           </div>
         </section>
 
-        <section id="program" className="section">
+        <section id="program" className="section programSection">
           <SectionHeader
             eyebrow="Program"
             title="Workshop Program"
@@ -421,7 +467,7 @@ function App() {
           </div>
         </section>
 
-        <section id="history" className="section darkSection">
+        <section id="history" className="section historySection darkSection">
           <SectionHeader
             eyebrow="Previous Editions"
             title="CyberNet workshop history"
@@ -543,6 +589,16 @@ function Metric({ number, label }) {
 function Feature({ icon, title, text }) {
   return (
     <article className="featureCard">
+      {icon}
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </article>
+  );
+}
+
+function FocusCard({ icon, title, text }) {
+  return (
+    <article className="focusCard">
       {icon}
       <h3>{title}</h3>
       <p>{text}</p>
