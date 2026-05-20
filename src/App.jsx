@@ -180,45 +180,81 @@ function App() {
               </div>
             </div>
 
-            <div className="cyberOpsCard">
-              <div className="cyberOpsTop">
-                <span className="windowDot red"></span>
-                <span className="windowDot yellow"></span>
-                <span className="windowDot green"></span>
-              </div>
+<div className="cyberOpsCard compactCyberCard">
+  <div className="cyberOpsTop">
+    <span className="windowDot red"></span>
+    <span className="windowDot yellow"></span>
+    <span className="windowDot green"></span>
+  </div>
 
-              <div className="cyberOpsHeader">
-                <p>SECURE_NETWORK_STATUS</p>
-                <h2>Call for Papers</h2>
-              </div>
+  <div className="cyberOpsHeader">
+    <p>SECURE_NETWORK_STATUS</p>
+    <h2>Call for Papers</h2>
+  </div>
 
-              <div className="radarModule">
-                <div className="radarCircle">
-                  <div className="radarSweep"></div>
+  <div className="compactRadarModule">
+    <div className="compactRadarCircle">
+      <div className="radarSweep"></div>
 
-                  <span className="radarNode nodeOne"></span>
-                  <span className="radarNode nodeTwo"></span>
-                  <span className="radarNode nodeThree"></span>
+      <span className="radarNode nodeOne"></span>
+      <span className="radarNode nodeTwo"></span>
+      <span className="radarNode nodeThree"></span>
 
-                  <div className="shieldCore">
-                    <svg viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 3L19 6V11.5C19 16.2 16.1 20 12 21C7.9 20 5 16.2 5 11.5V6L12 3Z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M8.8 12.1L10.9 14.2L15.4 9.7"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
+      <div className="compactShieldCore">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 3L19 6V11.5C19 16.2 16.1 20 12 21C7.9 20 5 16.2 5 11.5V6L12 3Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.8 12.1L10.9 14.2L15.4 9.7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div className="deadlineSecureBox compactDeadlineBox">
+    <small>Next Deadline</small>
+    <strong>August 31, 2026</strong>
+    <span>Workshop paper submission</span>
+  </div>
+
+  <div className="compactTimeline">
+    <div>
+      <span>01</span>
+      <div>
+        <small>Deadline</small>
+        <strong>Paper Submission</strong>
+        <p>August 31, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <span>02</span>
+      <div>
+        <small>Final Version</small>
+        <strong>Camera Ready</strong>
+        <p>September 30, 2026</p>
+      </div>
+    </div>
+
+    <div>
+      <span>03</span>
+      <div>
+        <small>Workshop Event</small>
+        <strong>Tokyo, Japan</strong>
+        <p>November 26, 2026</p>
+      </div>
+    </div>
+  </div>
+</div>
 
               <div className="deadlineSecureBox">
                 <small>Next Deadline</small>
