@@ -386,8 +386,7 @@ function App() {
               <Person
                 key={email}
                 name={name}
-                affiliation={role}
-                email={email}
+                affiliation={`${role} · ${email}`}
               />
             ))}
           </div>
