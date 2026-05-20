@@ -530,12 +530,7 @@ function CyberHeroCard() {
         <span>Workshop paper submission</span>
       </div>
 
-      <div className="cyberHeroCard__metrics">
-        <div className="metricItem">
-          <span className="metricItem__kicker">SECURITY FOCUS</span>
-          <strong>AI Defense</strong>
-          <small>Mission-critical mobile networks</small>
-        </div>
+     
 
         <div className="metricItem">
           <span className="metricItem__kicker">FINAL VERSION</span>
@@ -550,11 +545,7 @@ function CyberHeroCard() {
         </div>
       </div>
 
-      <div className="cyberHeroCard__tags">
-        <span>Zero-Trust</span>
-        <span>Secure Edge</span>
-        <span>AI Defense</span>
-      </div>
+      
     </div>
   );
 }
