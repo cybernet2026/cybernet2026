@@ -382,11 +382,11 @@ function App() {
           <h3 className="blockTitle">Web Coordination</h3>
 
           <div className="peopleGrid two">
-            {webTeam.map(([name, role, email]) => (
+            {webTeam.map(([name, affiliation]) => (
               <Person
-                key={email}
+                key={name}
                 name={name}
-                affiliation={`${role} · ${email}`}
+                affiliation={affiliation}
               />
             ))}
           </div>
