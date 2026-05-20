@@ -185,7 +185,7 @@ function App() {
                 <span />
               </div>
 
-              <p className="terminalLabel">CYBERNET_OPERATION_STATUS</p>
+              <p className="terminalLabel">CYBERNET_STATUS</p>
               <h2>Call for Papers</h2>
 
               <div className="threatDial">
