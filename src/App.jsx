@@ -502,7 +502,6 @@ function CyberHeroCard() {
       </div>
 
       <p className="cyberHeroCard__label">CYBERNET_STATUS</p>
-      <h3 className="cyberHeroCard__title">Security Operations Panel</h3>
 
       <div className="cyberHeroCard__visual">
         <div className="shieldPulse">
