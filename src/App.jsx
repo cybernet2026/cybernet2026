@@ -70,7 +70,7 @@ const coChairs = [
 ];
 
 const webTeam = [
-  ["Nathan Kahsay", "Web Coordinator", "Canadian University Dubai, UAE"],
+  ["Nathan Kahsay", "Canadian University Dubai, UAE"],
 ];
 
 const editions = [
