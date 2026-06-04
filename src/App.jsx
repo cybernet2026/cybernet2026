@@ -14,6 +14,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 
+const submissionUrl = "https://cybernet26.hotcrp.com";
+
 const nav = [
   ["Home", "home"],
   ["Scope", "scope"],
@@ -286,7 +288,7 @@ function App() {
           <SectionHeader
             eyebrow="Submission"
             title="Submission Information"
-            text="Papers should be submitted via the HotCRP submission website. The submission link will be updated shortly."
+            text="Papers should be submitted via the official HotCRP submission website for CyberNet 2026."
           />
 
           <div className="submissionLayout">
@@ -307,7 +309,7 @@ function App() {
                 <li>
                   Manuscripts should be submitted in PDF format following the
                   ACM two-column template, using a 10-point font on US Letter
-                  paper (8.5 × 11 inches).
+                  paper 8.5 × 11 inches.
                 </li>
                 <li>
                   Technical papers are limited to a maximum of 6 pages, including
@@ -344,10 +346,15 @@ function App() {
             <div>
               <p className="eyebrow light">Submission Link</p>
               <h3>HotCRP Submission Portal</h3>
-              <p>The HotCRP submission link will be updated shortly.</p>
+              <p>
+                Submit your CyberNet 2026 workshop paper through the official
+                HotCRP portal.
+              </p>
             </div>
 
-            <a href="#submission">Link Coming Soon</a>
+            <a href={submissionUrl} target="_blank" rel="noreferrer">
+              Submit via HotCRP <ExternalLink />
+            </a>
           </div>
         </section>
 
@@ -383,12 +390,7 @@ function App() {
 
           <div className="peopleGrid two">
             {webTeam.map(([name, affiliation]) => (
-              <Person
-                key={name}
-                name={name}
-                affiliation={affiliation}
-                
-              />
+              <Person key={name} name={name} affiliation={affiliation} />
             ))}
           </div>
 
