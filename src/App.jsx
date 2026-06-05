@@ -71,6 +71,10 @@ const coChairs = [
   ["Sherif Moussa", "Canadian University Dubai, UAE"],
 ];
 
+const publicityOutreachChairs = [
+  ["Dr. Tamer Mohamed", "Canadian University Dubai, UAE"],
+];
+
 const webTeam = [
   ["Nathan Kahsay", "Canadian University Dubai, UAE"],
 ];
@@ -362,7 +366,7 @@ function App() {
           <SectionHeader
             eyebrow="Committees"
             title="Workshop Committees"
-            text="CyberNet 2026 is organized by researchers from Canadian University Dubai, Delft University of Technology, and Soongsil University."
+            text="CyberNet 2026 is supported by workshop organizers, TPC co-chairs, publicity and outreach leadership, web coordination, and technical program contributors."
           />
 
           <h3 className="blockTitle">Workshop Organizers</h3>
@@ -382,6 +386,14 @@ function App() {
 
           <div className="peopleGrid two">
             {coChairs.map(([name, affiliation]) => (
+              <Person key={name} name={name} affiliation={affiliation} />
+            ))}
+          </div>
+
+          <h3 className="blockTitle">Publicity &amp; Outreach Chair</h3>
+
+          <div className="peopleGrid two">
+            {publicityOutreachChairs.map(([name, affiliation]) => (
               <Person key={name} name={name} affiliation={affiliation} />
             ))}
           </div>
