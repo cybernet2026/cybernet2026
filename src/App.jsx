@@ -72,7 +72,7 @@ const coChairs = [
 ];
 
 const publicityOutreachChairs = [
-  ["Dr. Tamer Mohamed", "Canadian University Dubai, UAE"],
+  ["Tamer Mohamed", "Canadian University Dubai, UAE"],
 ];
 
 const webTeam = [
