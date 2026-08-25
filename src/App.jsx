@@ -126,6 +126,42 @@ function App() {
     <div className="site">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
+
+      <style>{`
+        .openAccessBanner > div {
+          min-width: 0;
+        }
+
+        .openAccessBanner h3 {
+          margin-bottom: 22px;
+        }
+
+        .openAccessBanner p:not(.eyebrow) {
+          margin: 0 0 18px;
+          line-height: 1.72;
+          text-align: justify;
+          text-justify: inter-word;
+          hyphens: auto;
+        }
+
+        .openAccessBanner ul {
+          margin: 6px 0 0;
+          padding-left: 28px;
+          line-height: 1.65;
+        }
+
+        .openAccessBanner li + li {
+          margin-top: 3px;
+        }
+
+        @media (max-width: 760px) {
+          .openAccessBanner p:not(.eyebrow) {
+            text-align: left;
+            hyphens: none;
+          }
+        }
+      `}</style>
+
       <main>
         <section id="home" className="hero">
           <div className="heroGrid" />
@@ -140,10 +176,20 @@ function App() {
               </div>
 
               <h1>
-                CyberNet:
-                <br />
-                Next-Gen Cybersecurity for
-                <em> Mission-Critical Mobile Networks</em>
+                <span style={{ display: "block", marginBottom: "10px" }}>
+                  CyberNet:
+                </span>
+                <span style={{ display: "block" }}>
+                  Next-Gen Cybersecurity for
+                </span>
+                <em
+                  style={{
+                    display: "block",
+                    marginTop: "10px",
+                  }}
+                >
+                  Mission-Critical Mobile Networks
+                </em>
               </h1>
 
               <p className="heroLead">
@@ -295,7 +341,7 @@ function App() {
             text="Papers should be submitted via the official HotCRP submission website for CyberNet 2026."
           />
 
-          <div className="submissionBanner">
+          <div className="submissionBanner openAccessBanner">
             <div>
               <p className="eyebrow light">
                 Important ACM Open Access Update
