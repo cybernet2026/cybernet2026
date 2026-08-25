@@ -295,6 +295,62 @@ function App() {
             text="Papers should be submitted via the official HotCRP submission website for CyberNet 2026."
           />
 
+          <div className="submissionBanner">
+            <div>
+              <p className="eyebrow light">
+                Important ACM Open Access Update
+              </p>
+
+              <h3>ACM Open Access Publishing Model for 2026</h3>
+
+              <p>
+                Starting January 1, 2026, ACM will fully transition to Open
+                Access. All ACM publications, including those from ACM-sponsored
+                conferences, will be 100% Open Access.
+              </p>
+
+              <p>
+                Authors will have two primary options for publishing Open Access
+                articles with ACM: the ACM Open institutional model or by paying
+                Article Processing Charges (APCs). With more than 2,600
+                institutions already participating in ACM Open, the majority of
+                ACM-sponsored conference papers will not require APCs from
+                authors or conferences; currently, approximately 76% fall into
+                this category.
+              </p>
+
+              <p>
+                Authors from institutions not participating in ACM Open will
+                need to pay an APC to publish their papers unless they qualify
+                for a financial waiver. Waivers are rare and are granted based
+                on specific criteria established by ACM.
+              </p>
+
+              <p>
+                To ease the transition in 2026 and allow more time for
+                institutions to join ACM Open, ACM has approved a temporary
+                subsidy:
+              </p>
+
+              <ul>
+                <li>
+                  <strong>$250 APC</strong> for ACM/SIG members
+                </li>
+                <li>
+                  <strong>$350 APC</strong> for non-members
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="https://www.acm.org/publications/policies/policy-on-discretionary-open-access-apc-waivers"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Review ACM APC Waiver Policy <ExternalLink />
+            </a>
+          </div>
+
           <div className="submissionLayout">
             <div className="instructionCard">
               <FileText />
