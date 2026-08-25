@@ -126,6 +126,7 @@ function App() {
     <div className="site">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
+
       <main>
         <section id="home" className="hero">
           <div className="heroGrid" />
@@ -139,17 +140,36 @@ function App() {
                 3rd International Workshop · ACM MobiHoc 2026
               </div>
 
-              <h1>
-                <span style={{ display: "block", marginBottom: "10px" }}>
+              <h1
+                style={{
+                  fontSize: "clamp(48px, 5.1vw, 78px)",
+                  lineHeight: 1.06,
+                  letterSpacing: "-0.045em",
+                  maxWidth: "1080px",
+                }}
+              >
+                <span
+                  style={{
+                    display: "block",
+                    marginBottom: "14px",
+                  }}
+                >
                   CyberNet:
                 </span>
-                <span style={{ display: "block" }}>
+
+                <span
+                  style={{
+                    display: "block",
+                    marginBottom: "12px",
+                  }}
+                >
                   Next-Gen Cybersecurity for
                 </span>
+
                 <em
                   style={{
                     display: "block",
-                    marginTop: "10px",
+                    lineHeight: 1.08,
                   }}
                 >
                   Mission-Critical Mobile Networks
@@ -305,21 +325,39 @@ function App() {
             text="Papers should be submitted via the official HotCRP submission website for CyberNet 2026."
           />
 
-          <div className="submissionBanner">
+          <div className="submissionBanner openAccessBanner">
             <div>
               <p className="eyebrow light">
                 Important ACM Open Access Update
               </p>
 
-              <h3>ACM Open Access Publishing Model for 2026</h3>
+              <h3 style={{ marginBottom: "24px" }}>
+                ACM Open Access Publishing Model for 2026
+              </h3>
 
-              <p>
+              <p
+                style={{
+                  textAlign: "justify",
+                  textJustify: "inter-word",
+                  lineHeight: 1.78,
+                  margin: "0 0 20px",
+                  hyphens: "auto",
+                }}
+              >
                 Starting January 1, 2026, ACM will fully transition to Open
                 Access. All ACM publications, including those from ACM-sponsored
                 conferences, will be 100% Open Access.
               </p>
 
-              <p>
+              <p
+                style={{
+                  textAlign: "justify",
+                  textJustify: "inter-word",
+                  lineHeight: 1.78,
+                  margin: "0 0 20px",
+                  hyphens: "auto",
+                }}
+              >
                 Authors will have two primary options for publishing Open Access
                 articles with ACM: the ACM Open institutional model or by paying
                 Article Processing Charges (APCs). With more than 2,600
@@ -329,20 +367,42 @@ function App() {
                 this category.
               </p>
 
-              <p>
+              <p
+                style={{
+                  textAlign: "justify",
+                  textJustify: "inter-word",
+                  lineHeight: 1.78,
+                  margin: "0 0 20px",
+                  hyphens: "auto",
+                }}
+              >
                 Authors from institutions not participating in ACM Open will
                 need to pay an APC to publish their papers unless they qualify
                 for a financial waiver. Waivers are rare and are granted based
                 on specific criteria established by ACM.
               </p>
 
-              <p>
+              <p
+                style={{
+                  textAlign: "justify",
+                  textJustify: "inter-word",
+                  lineHeight: 1.78,
+                  margin: "0 0 20px",
+                  hyphens: "auto",
+                }}
+              >
                 To ease the transition in 2026 and allow more time for
                 institutions to join ACM Open, ACM has approved a temporary
                 subsidy:
               </p>
 
-              <ul>
+              <ul
+                style={{
+                  margin: "2px 0 0",
+                  paddingLeft: "30px",
+                  lineHeight: 1.65,
+                }}
+              >
                 <li>
                   <strong>$250 APC</strong> for ACM/SIG members
                 </li>
