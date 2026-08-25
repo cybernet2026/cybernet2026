@@ -126,42 +126,6 @@ function App() {
     <div className="site">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-
-      <style>{`
-        .openAccessBanner > div {
-          min-width: 0;
-        }
-
-        .openAccessBanner h3 {
-          margin-bottom: 22px;
-        }
-
-        .openAccessBanner p:not(.eyebrow) {
-          margin: 0 0 18px;
-          line-height: 1.72;
-          text-align: justify;
-          text-justify: inter-word;
-          hyphens: auto;
-        }
-
-        .openAccessBanner ul {
-          margin: 6px 0 0;
-          padding-left: 28px;
-          line-height: 1.65;
-        }
-
-        .openAccessBanner li + li {
-          margin-top: 3px;
-        }
-
-        @media (max-width: 760px) {
-          .openAccessBanner p:not(.eyebrow) {
-            text-align: left;
-            hyphens: none;
-          }
-        }
-      `}</style>
-
       <main>
         <section id="home" className="hero">
           <div className="heroGrid" />
@@ -341,7 +305,7 @@ function App() {
             text="Papers should be submitted via the official HotCRP submission website for CyberNet 2026."
           />
 
-          <div className="submissionBanner openAccessBanner">
+          <div className="submissionBanner">
             <div>
               <p className="eyebrow light">
                 Important ACM Open Access Update
