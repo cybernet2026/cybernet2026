@@ -113,6 +113,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [openEdition, setOpenEdition] = useState(0);
+  const [showAllTopics, setShowAllTopics] = useState(false);
 
   const filteredTopics = useMemo(
     () =>
@@ -121,6 +122,13 @@ function App() {
       ),
     [query]
   );
+
+  const visibleTopics =
+    query.trim().length > 0 || showAllTopics
+      ? filteredTopics
+      : filteredTopics.slice(0, 6);
+
+  const hiddenTopicCount = Math.max(filteredTopics.length - 6, 0);
 
   return (
     <div className="site">
@@ -305,13 +313,62 @@ function App() {
           </div>
 
           <div className="topicGrid">
-            {filteredTopics.map((topic) => (
+            {visibleTopics.map((topic) => (
               <article key={topic} className="topicCard">
                 <ShieldCheck />
                 <p>{topic}</p>
               </article>
             ))}
           </div>
+
+          {query.trim().length === 0 && hiddenTopicCount > 0 && (
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "30px",
+              }}
+            >
+              <button
+                type="button"
+                onClick={() => setShowAllTopics((current) => !current)}
+                aria-expanded={showAllTopics}
+                style={{
+                  minHeight: "52px",
+                  padding: "13px 22px",
+                  borderRadius: "14px",
+                  border: "1px solid rgba(86, 242, 208, 0.5)",
+                  background: showAllTopics
+                    ? "rgba(86, 242, 208, 0.14)"
+                    : "rgba(255, 255, 255, 0.07)",
+                  color: "white",
+                  font: "inherit",
+                  fontWeight: 850,
+                  cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                }}
+              >
+                <span>
+                  {showAllTopics
+                    ? "Show Fewer Topics"
+                    : `Show ${hiddenTopicCount} More Topics`}
+                </span>
+
+                <ChevronDown
+                  size={20}
+                  style={{
+                    transition: "transform 0.2s ease",
+                    transform: showAllTopics
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                  }}
+                />
+              </button>
+            </div>
+          )}
 
           {filteredTopics.length === 0 && (
             <p className="empty">No topics matched your search.</p>
