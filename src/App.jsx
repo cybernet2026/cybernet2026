@@ -27,7 +27,7 @@ const nav = [
 ];
 
 const dates = [
-  ["Paper Submission", "August 31, 2026", "Deadline"],
+  ["Paper Submission", "September 7, 2026 (Firm Deadline)", "Deadline"],
   ["Camera Ready", "September 30, 2026", "Final version"],
   ["Workshop Event", "November 26, 2026", "Tokyo, Japan"],
 ];
@@ -219,7 +219,7 @@ function App() {
 
               <div className="deadlineBox">
                 <small>Next Deadline</small>
-                <strong>August 31, 2026</strong>
+                <strong>September 7, 2026 (Firm Deadline)</strong>
                 <span>Workshop paper submission</span>
               </div>
 
