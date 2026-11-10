@@ -13,6 +13,7 @@ import {
   ExternalLink,
   ChevronDown,
 } from "lucide-react";
+import "./cybernet-program.css";
 
 const submissionUrl = "https://cybernet26.hotcrp.com";
 
@@ -99,21 +100,172 @@ const editions = [
   },
 ];
 
-const program = [
-  ["09:00", "Opening Remarks", "Workshop Organizers"],
-  ["09:30", "Technical Session I", "Accepted papers"],
-  ["11:00", "Invited Talk", "Speaker to be announced"],
-  ["12:00", "Lunch Break", "Conference schedule"],
-  ["13:30", "Technical Session II", "Accepted papers"],
-  ["15:30", "Panel Discussion", "Researchers and practitioners"],
-  ["16:30", "Closing Remarks", "Workshop Organizers"],
+const programPdfUrl = `${import.meta.env.BASE_URL}CyberNet_2026_Full_Program.pdf`;
+
+const cyberProgram = [
+  {
+    "time": "08:30–08:45",
+    "title": "Welcome and Opening Remarks",
+    "type": "opening"
+  },
+  {
+    "time": "08:45–09:45",
+    "title": "Session 1: Intelligent and Secure Networked Systems",
+    "type": "session",
+    "papers": [
+      {
+        "title": "Reliable V2X-Enabled Autonomous Driving with Explainable Federated Neuro-Symbolic Intelligence",
+        "authors": "Zhaoyang Du, Celimuge Wu, Yalong Li, Jiale Wu (The University of Electro-Communications); Soufiene Djahel (Coventry University); Jianhang Tang (Guizhou University)"
+      },
+      {
+        "title": "RAMP: History-Aware Multi-Access Path Management for Resilient Edge Networks",
+        "authors": "Amardeep Kumar, Dinesh Sah, Lauri Loven (University of Oulu)"
+      },
+      {
+        "title": "Lightweight Approximate Nearest Neighbors Based Sparse Attention Transformer for NetBIOS Attack Detection in IoT Networks",
+        "authors": "Liang Zhou (Shanghai University of Medicine and Health Sciences); Shavi Bansal (InsightsTechinfo); Akshat Gaurav (Asia University); Kwok Tai Chui (Hong Kong Metropolitan University); Mu-Yen Chen (National Cheng Kung University); Jinsong Wu (Universidad de Chile); Brij B. Gupta (Asia University)"
+      }
+    ],
+    "description": "Full paper presentation + Q&A (20 min each)"
+  },
+  {
+    "time": "09:45–10:15",
+    "title": "Coffee and Networking",
+    "type": "break"
+  },
+  {
+    "time": "10:15–11:15",
+    "title": "Keynote 1: Prof. Wenjing Lou (Virginia Tech)",
+    "type": "keynote",
+    "speakerId": "lou",
+    "subtitle": "No More Tracking, No More Robocalls: Private Communication in Public NextG Networks"
+  },
+  {
+    "time": "11:15–12:15",
+    "title": "Session 2: Federated Learning and Intelligent Network Security",
+    "type": "session",
+    "papers": [
+      {
+        "title": "PQ-FL-IDS: A Post Quantum Safe Federated Edge Intrusion Detection Scheme underlying 6G",
+        "authors": "Husain Lucky, Pronaya Bhattacharya (Amity University Kolkata); Mu-Yen Chen (National Cheng Kung University); Kwok Tai Chui (Hong Kong Metropolitan University); Brij B. Gupta (Asia University); Thippa Reddy Gadekallu (Lovely Professional University)"
+      },
+      {
+        "title": "Strategic Client-Level Defense Placement in Mobile Federated Learning",
+        "authors": "Anish Ambreth, Naveen Kumar Kummari, Mohsen Guizani (MBZUAI)"
+      },
+      {
+        "title": "C-MoA-XRT: Explainability-Aware Trust Routing for Collaborative Threat Detection in Mobile-Edge Networks",
+        "authors": "Faisal Naeem (University of the Fraser Valley); Samuel Okegbile (Wilfrid Laurier University); Yasir Faheem (Canadian University Dubai)"
+      }
+    ],
+    "description": "Full paper presentation + Q&A (20 min each)"
+  },
+  {
+    "time": "12:15–13:30",
+    "title": "Lunch and Networking",
+    "type": "break",
+    "subtitle": "Lunch and networking"
+  },
+  {
+    "time": "13:30–14:30",
+    "title": "Keynote 2: Prof. Mohsen Guizani (MBZUAI)",
+    "type": "keynote",
+    "speakerId": "guizani",
+    "subtitle": "Talk title to be announced"
+  },
+  {
+    "time": "14:30–15:30",
+    "title": "Session 3: Next-Generation Networks and Communication Security",
+    "type": "session",
+    "papers": [
+      {
+        "title": "Receiver-Aware Token Routing for Semantic Communication",
+        "authors": "Yangfei Lin, Celimuge Wu, Jiale Wu, Yalong Li (The University of Electro-Communications); Mohsen Guizani (MBZUAI)"
+      },
+      {
+        "title": "Private 5G Security Across Public and Non-Public Networks: A Cross-Deployment Analysis",
+        "authors": "Ravishankar Borgaonkar (SINTEF Digital); Silje Kingsrud Kvisten, Thomas Zinner (NTNU)"
+      },
+      {
+        "title": "A Comparative Evaluation of Modbus Security Telemetry Extraction",
+        "authors": "Erkin Kirdan, Karl Waedt (Framatome)"
+      }
+    ],
+    "description": "Full paper presentation + Q&A (20 min each)"
+  },
+  {
+    "time": "15:30–16:00",
+    "title": "Coffee and Networking",
+    "type": "break"
+  },
+  {
+    "time": "16:00–17:00",
+    "title": "Session 4: Trust and Resilience in Next-Generation Networks",
+    "type": "session",
+    "papers": [
+      {
+        "title": "Resilient Priority-Aware Inference for Mission-Critical UAV Networks Under Bursty Edge Load",
+        "authors": "Maher Guizani (University of Texas at Arlington); Ishita Agarwal, Naveen Kumar Kummari (MBZUAI); Mohammad Atiqul Islam (University of Texas at Arlington)"
+      },
+      {
+        "title": "Trust-Driven Multi-Criteria Aerial Networking for Mission-Critical IoT with Localization Uncertainty",
+        "authors": "Muhammad Omair Butt (Lakehead University); Muhammad Naeem (COMSATS University); Waleed Ejaz (Lakehead University)"
+      },
+      {
+        "title": "Latency Aware Zero Trust Authorization for Secure Mobile Edge Networks",
+        "authors": "Ankita Behera (SRM University-AP); Deepak Puthal (UAE University); Sambit Kumar Mishra (SRM University-AP); Parag Kulkarni (UAE University)"
+      }
+    ],
+    "description": "Full paper presentation + Q&A (20 min each)"
+  },
+  {
+    "time": "17:00–17:40",
+    "title": "Session 5: Emerging Techniques in Network Intrusion Detection",
+    "type": "session",
+    "papers": [
+      {
+        "title": "Topology-Aware Sparse Attention for Intrusion Detection in Communication Networks",
+        "authors": "Brij B. Gupta, Akshat Gaurav (Asia University); Varsha Arya (Hong Kong Metropolitan University); Mu-Yen Chen (National Cheng Kung University); Kwok Tai Chui (Hong Kong Metropolitan University)"
+      },
+      {
+        "title": "Federated Transfer Learning with Attentional Graph Neural Networks for Zero-Day IoT Botnet Detection and Secure Edge Orchestration",
+        "authors": "Ajay Kumar (Bennett University); Shaktiyavesh Nandan Pratap Singh (Rajasthan Technical University, Kota); Swati Kumari (Deakin University); Ishan Budhiraja (Bennett University); Manish Chaturvedi (Rajasthan Technical University, Kota)"
+      }
+    ],
+    "description": "Full paper presentation + Q&A (20 min each)"
+  },
+  {
+    "time": "17:40–17:50",
+    "title": "Closing Remarks",
+    "type": "closing"
+  }
 ];
+
+const keynoteSpeakers = {
+  "lou": {
+    "name": "Prof. Wenjing Lou",
+    "affiliation": "Virginia Tech",
+    "photo": "cybernet-wenjing-lou.jpg",
+    "talkTitle": "No More Tracking, No More Robocalls: Private Communication in Public NextG Networks",
+    "abstract": "Mobile networks provide ubiquitous connectivity but also expose users to privacy risks, as mobile network operators (MNOs) may be able to identify, track, and profile subscribers. These risks are particularly concerning when users rely on foreign or otherwise untrusted public networks.\n\nIn this talk, we present a novel anonymous mobile access architecture that enables legitimate subscribers to use public mobile networks without revealing their real identities or allowing their connections across different sessions to be linked. Meanwhile, the architecture preserves essential network functionality and supports user deanonymization under appropriate legal intervention. Beyond anonymous access, the architecture also supports private native mobile phone calls and a user-defined, policy-based, end-to-end mechanism for blocking unwanted communications, such as spam and scam calls. Drawing on emerging technologies such as anonymous credentials, this work explores a new approach to building private and trustworthy mobile networks for the NextG era.",
+    "bio": "Wenjing Lou is the W. C. English Endowed Professor of Computer Science at Virginia Tech and a Fellow of the IEEE and ACM. Her research interests cover many topics in the cybersecurity field, with her current research interest focusing on security and privacy problems in wireless networks, blockchain, trustworthy AI, and Internet of Things (IoT) systems. Prof. Lou received the Virginia Tech Alumni Award for Research Excellence in 2018, the highest university-level faculty research award. She received the INFOCOM Test-of-Time paper award in 2020 and the INFOCOM Achievement Award in 2025. She is the TPC chair for IEEE INFOCOM 2019 and ACM WiSec 2020. She was the Steering Committee Chair for IEEE CNS conference from 2013 to 2020. She is currently the steering committee chair of IEEE INFOCOM and a steering committee member of IEEE CNS. She served as a program director at the US National Science Foundation (NSF) from 2014 to 2017."
+  },
+  "guizani": {
+    "name": "Prof. Mohsen Guizani",
+    "affiliation": "Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)",
+    "photo": "cybernet-mohsen-guizani.jpg",
+    "talkTitle": "To be announced",
+    "abstract": "To be announced.",
+    "bio": "Mohsen Guizani (Fellow, IEEE) received the BS (with distinction), MS and PhD degrees in Electrical and Computer engineering from Syracuse University, Syracuse, NY, USA. He is currently a Professor of Machine Learning at the Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, UAE. Previously, he worked in different institutions in the USA. His research interests include applied machine learning and artificial intelligence, smart city, Internet of Things (IoT), intelligent autonomous systems, and cybersecurity. He was elevated to IEEE Fellow in 2009 and was listed as a Clarivate Analytics Highly Cited Researcher in Computer Science in 2019-2022. Dr. Guizani has won several research awards including the \"2015 IEEE Communications Society Best Survey Paper Award\", the Best ComSoc Journal Paper Award in 2021 as well 5 Best Paper Awards from ICC and Globecom Conferences. He is the author of 11 books, more than 1000 publications and several US patents. He is also the recipient of the 2017 IEEE Communications Society Wireless Technical Committee (WTC) Recognition Award, the 2018 AdHoc Technical Committee Recognition Award, and the 2019 IEEE Communications and Information Security Technical Recognition (CISTC) Award. He served as the Editor-in-Chief of IEEE Network and is currently serving on the Editorial Boards of many IEEE Transactions and Magazines. He was the Chair of the IEEE Communications Society Wireless Technical Committee and the Chair of the TAOS Technical Committee. He served as the IEEE Computer Society Distinguished Speaker and is currently the IEEE ComSoc Distinguished Lecturer."
+  }
+};
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [openEdition, setOpenEdition] = useState(0);
   const [showAllTopics, setShowAllTopics] = useState(false);
+  const [programPeriod, setProgramPeriod] = useState("All");
 
   const filteredTopics = useMemo(
     () =>
@@ -596,26 +748,150 @@ function App() {
           </div>
         </section>
 
-        <section id="program" className="section">
-          <SectionHeader
-            eyebrow="Program"
-            title="Workshop Program"
-            text="The detailed technical program will be announced after acceptance and camera-ready submission."
-          />
-
-          <div className="programList">
-            {program.map(([time, title, speaker]) => (
-              <div className="programItem" key={`${time}-${title}`}>
-                <time>{time}</time>
-
-                <div>
-                  <h3>{title}</h3>
-                  <p>{speaker}</p>
-                </div>
-
-                <span>TBA</span>
+        <section id="program" className="cyberProgramSection">
+          <div className="cyberProgramShell">
+            <header className="cyberProgramTop">
+              <div className="cyberProgramHeading">
+                <p className="cyberProgramEyebrow">Official workshop agenda</p>
+                <h2>CyberNet 2026 Program</h2>
+                <p>
+                  Thursday, November 26, 2026 · In conjunction with ACM MobiHoc 2026
+                </p>
               </div>
-            ))}
+              <a
+                className="cyberProgramDownload"
+                href={programPdfUrl}
+                download="CyberNet_2026_Full_Program.pdf"
+              >
+                <FileText size={19} aria-hidden="true" />
+                Download Full Program (PDF)
+              </a>
+            </header>
+
+            <div className="cyberProgramFacts">
+              <div>
+                <span>Workshop date</span>
+                <strong>Thursday, November 26, 2026</strong>
+              </div>
+              <div>
+                <span>Time</span>
+                <strong>08:30–17:50 (JST)</strong>
+              </div>
+              <div>
+                <span>Venue</span>
+                <strong>
+                  Hotel Metropolitan Tokyo Ikebukuro · Room TBA
+                  <small>1-6-1 Nishi-Ikebukuro, Toshima-ku, Tokyo 171-8505, Japan</small>
+                </strong>
+              </div>
+            </div>
+
+            <div className="cyberProgramToolbar">
+              <p>5 technical sessions <span>·</span> 14 papers <span>·</span> 2 keynotes</p>
+              <div className="cyberPeriodButtons" role="group" aria-label="Filter program by time">
+                {["All", "Morning", "Afternoon"].map((period) => (
+                  <button
+                    type="button"
+                    key={period}
+                    onClick={() => setProgramPeriod(period)}
+                    aria-pressed={programPeriod === period}
+                    className={programPeriod === period ? "selected" : ""}
+                  >
+                    {period}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="cyberAgendaList">
+              {cyberProgram
+                .filter((entry) => {
+                  const hour = Number(entry.time.slice(0, 2));
+                  return (
+                    programPeriod === "All" ||
+                    (programPeriod === "Morning" ? hour < 12 : hour >= 12)
+                  );
+                })
+                .map((entry) => {
+                  const speaker = entry.speakerId
+                    ? keynoteSpeakers[entry.speakerId]
+                    : null;
+
+                  return (
+                    <article
+                      className={`cyberAgendaRow cyberAgenda-${entry.type}`}
+                      key={`${entry.time}-${entry.title}`}
+                    >
+                      <div className="cyberAgendaTime">{entry.time}</div>
+                      <div className="cyberAgendaBody">
+                        <div className="cyberAgendaRowHeader">
+                          <div>
+                            <span className="cyberAgendaType">
+                              {entry.type === "session"
+                                ? "Technical Session"
+                                : entry.type === "keynote"
+                                ? "Keynote Address"
+                                : entry.type === "break"
+                                ? "Break"
+                                : entry.type === "opening"
+                                ? "Opening"
+                                : "Closing"}
+                            </span>
+                            <h3>{entry.title}</h3>
+                            {entry.type === "session" && (
+                              <p>{entry.description}</p>
+                            )}
+                          </div>
+                          {entry.type === "session" && (
+                            <span className="cyberAgendaCount">
+                              {entry.papers.length} papers
+                            </span>
+                          )}
+                        </div>
+
+                        {entry.type === "session" && (
+                          <details className="cyberPapersDisclosure">
+                            <summary>
+                              <span>View {entry.papers.length} papers and authors</span>
+                              <ChevronDown size={19} aria-hidden="true" />
+                            </summary>
+                            <ol className="cyberPaperList">
+                              {entry.papers.map((paper) => (
+                                <li key={paper.title}>
+                                  <h4>{paper.title}</h4>
+                                  <p>{paper.authors}</p>
+                                </li>
+                              ))}
+                            </ol>
+                          </details>
+                        )}
+
+                        {speaker && (
+                          <div className="cyberKeynoteFeature">
+                            <aside className="cyberKeynoteIdentity">
+                              <img
+                                src={`${import.meta.env.BASE_URL}${speaker.photo}`}
+                                alt={`Photograph of ${speaker.name}`}
+                                loading="lazy"
+                              />
+                              <h4>{speaker.name}</h4>
+                              <p>{speaker.affiliation}</p>
+                            </aside>
+                            <div className="cyberKeynoteText">
+                              <p className="cyberKeynoteLabel">Keynote topic</p>
+                              <h4>{speaker.talkTitle}</h4>
+                              <h5>Abstract</h5>
+                              <p className="cyberKeynoteProse">{speaker.abstract}</p>
+                              <h5>Biography</h5>
+                              <p className="cyberKeynoteProse">{speaker.bio}</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </article>
+                  );
+                })}
+            </div>
           </div>
         </section>
 
