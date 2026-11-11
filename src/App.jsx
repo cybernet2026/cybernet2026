@@ -252,7 +252,7 @@ const keynoteSpeakers = {
   },
   "guizani": {
     "name": "Prof. Mohsen Guizani",
-    "affiliation": "Machine Learning Department, MBZUAI, UAE",
+    "affiliation": "MBZUAI, UAE",
     "photo": "cybernet-mohsen-guizani.jpg",
     "talkTitle": "Security & Privacy of IoT Systems with Federated Learning",
     "abstract": "To meet the Internet of Things (IoT) diverse requirements for increasing IoT smart city applications and ensure security and privacy, ML and edge computing with its privacy have recently proliferated and frequently used. An IoT edge computing device with AI/ML technologies, security related platforms and machine learning, could enable smart city systems to perform complex maneuvers that were not possible just a few years ago. So, IoT and edge computing with AI/ML have provided a platform for many of these applications to protect the data and reduce latency while increasing efficiency. These smart services/applications rely on efficient computation and communication resources. In this talk, we showcase our research activities that could contribute to improve these efforts and advocate possible solutions using such models. Then, we anticipate some challenges that need to be addressed in future research directions.",
@@ -375,12 +375,12 @@ function App() {
 
               <p className="terminalLabel">CYBERNET_STATUS</p>
 
-              <h2>Call for Papers</h2>
+              <h2>Workshop Information</h2>
 
               <div className="deadlineBox">
-                <small>Next Deadline</small>
-                <strong>September 7, 2026 (Firm Deadline)</strong>
-                <span>Workshop paper submission</span>
+                <small>Workshop Day</small>
+                <strong>26 November 2026</strong>
+                <span>Thursday</span>
               </div>
 
               <div className="terminalRows">
