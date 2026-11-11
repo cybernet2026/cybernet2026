@@ -135,7 +135,7 @@ const cyberProgram = [
   },
   {
     "time": "10:15–11:15",
-    "title": "Keynote 1: Prof. Wenjing Lou (Virginia Tech)",
+    "title": "Keynote 1: Prof. Wenjing Lou",
     "type": "keynote",
     "speakerId": "lou",
     "subtitle": "No More Tracking, No More Robocalls: Private Communication in Public NextG Networks"
@@ -168,7 +168,7 @@ const cyberProgram = [
   },
   {
     "time": "13:30–14:30",
-    "title": "Keynote 2: Prof. Mohsen Guizani (MBZUAI)",
+    "title": "Keynote 2: Prof. Mohsen Guizani",
     "type": "keynote",
     "speakerId": "guizani",
     "subtitle": "Security & Privacy of IoT Systems with Federated Learning"
